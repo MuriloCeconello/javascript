@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            background-color: #6e6e6e;
+        }
+
+        #area {
+            font: normal 1.3em sans-serif;
+            background-color: rgb(94, 197, 117);
+            color: #000000;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        // Para o HTML não ficar poluído, podemos usar os métodos 'onclick' , 'mouseenter' & 'mouseout' no script
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'lightskyblue'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'lightsalmon'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'lightyellow'
+        }
+    </script>
+</body>
+
+</html>
