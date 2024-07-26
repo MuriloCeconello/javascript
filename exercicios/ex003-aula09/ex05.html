@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: #0084ff;
+            color: #ffffff;
+            font: normal 1.3em Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo">Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+
+        // ESSES COMANDOS ABAIXO É PARA ALTERAÇÃO DE UM PARÁGRAFO
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.writeln(`Está escrito assim:  ${p1.innerText}`)
+        p1.style.color = 'black'
+
+        // ESSES COMANDOS ABAIXO É PARA ALTERAÇÃO DO BODY
+        var corpo = window.document.body
+        corpo.style.background = 'lightgreen'
+
+        // 'innerText' NAO LEVA CONFIGURAÇÕES COMO STRONG, PARA ISSO USAMOS 'innerHTML'
+        var p2 = window.document.getElementsByTagName('p')[1]
+        window.document.writeln(p2.innerHTML)
+
+        // PODEMOS SIMPLIFICAR O CÓDIGO DESSA MANEIRA:
+        var d = document.getElementById('msg')
+        d.style.background = 'yellow'
+        d.style.color = 'black'
+        d.innerText = 'Estou aguardando...'
+
+        // PODEMOS UTILIZAR O 'querySelector'
+        var title = document.querySelector('h1#titulo')
+        title.style.background = 'black'
+    </script>
+</body>
+
+</html>
