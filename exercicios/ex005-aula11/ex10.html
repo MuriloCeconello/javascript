@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body {
+            background-color: #b4b4b4;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.3em;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        input {
+            border-radius: 5px;
+            border: 1px solid transparent;
+            padding: 7px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.getElementById('res')
+            var vel = Number(txtvel.value)
+            res.innerHTML = `<p>A velocidade atual do seu carro é de <strong>${vel}Km/h.</strong>`
+            if (vel > 60) {
+                res.innerHTML += `<p>Você foi MULTADO!`
+            }
+            res.innerHTML += '<p>Dirija sempre usando cinto de seguraça!'
+        }
+    </script>
+</body>
+
+</html>

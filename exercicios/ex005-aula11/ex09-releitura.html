@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body {
+            font-size: 1.3em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        input {
+            border-radius: 5px;
+            border: 2px solid #000000;
+            padding: 7px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Nacionalidade</h1>
+    Digite seu país: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var txtn = document.getElementById('txtnac')
+            var res = document.getElementById('res')
+            var nac = txtnac.value
+            res.innerHTML = `Você vive em ${nac}`
+            if (nac == 'Brasil') {
+                res.innerHTML += '<p>Você é Brasileiro(a)!'
+            } else {
+                res.innerHTML += '<p>Você é Estrangeiro(a)!'
+            }
+        }
+    </script>
+</body>
+
+</html>
