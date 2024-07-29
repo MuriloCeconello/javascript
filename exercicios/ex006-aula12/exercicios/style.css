@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --dia: #F2BF80;
+    --tarde: #cc772d;
+    --noite: #023859;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1d86c7;
+    position: relative;
+}
+
+header {
+    padding: 50px;
+    font-size: 1.4em;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+}
+
+section {
+    background-color: #ffffff;
+    width: 550px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#footer {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+div{
+    text-align: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    padding: 5px;
+}
