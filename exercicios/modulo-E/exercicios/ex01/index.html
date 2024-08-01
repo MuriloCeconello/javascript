@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contador</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,23 +15,26 @@
     <section>
         <div>
             <p>
-                Início: <input type="number" name="txtinicio" id="txtinicio">
-                <label for="txtinicio"></label>
+                <label for="txtinicio">Início: </label>
+                <input type="number" name="txtinicio" id="txtinicio">
             </p>
             <p>
-                Fim: <input type="number" name="txtfim" id="txtfim">
-                <label for="txtfim"></label>
+                <label for="txtfim">Fim: </label>
+                <input type="number" name="txtfim" id="txtfim">
             </p>
             <p>
-                Passo: <input type="number" name="txtpasso" id="txtpasso">
-                <label for="txtpasso"></label>
+                <label for="txtpasso">Passo: </label>
+                <input type="number" name="txtpasso" id="txtpasso">
             </p>
-            <input type="button" id="contar" value="Contar" onclick="contar()">
+            <p>
+                <input type="button" id="button" value="Contar" onclick="contar()">
+            </p>
         </div>
-        <p>Contando: </p>
         <div id="res">
+            Esperando dados:
         </div>
     </section>
+
     <footer>&copy; CursoemVideo</footer>
     <script src="script.js"></script>
 </body>
